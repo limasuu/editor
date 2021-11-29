@@ -1,3 +1,9 @@
+:root {
+	--branco1: #f2f3f8;
+	--branco2: white;
+	--preto: #2e3436;
+}
+
 *{
 	padding: 0px;
 	margin: 0px;	
@@ -8,19 +14,19 @@ body{
 	flex-direction: column;	
 	align-items: center;
 	
-	background-color: #2e3436;
-	color: #eeeeec;
+	background-color: var(--preto);	
 }
 
 #principal{
 	display: flex;
 	margin: 0px 10px 0px 10px;
-	
+		
 	width: 95%;
-	height: 70%;
+	height: 70%;	
 	
-	border: 2px solid #f2f3f8;
 	border-radius: 2%;
+	
+	background-color: var(--branco2);	
 }
 
 .sub-principal{
@@ -32,16 +38,21 @@ body{
 }
 
 #div-codigo-fonte{
-	border-right: 1px solid #f2f3f8;
+	border-right: 1px solid var(--preto);
 }
 
-#div-previa{
-	border-left: 1px solid #f2f3f8;	
+#div-previa{		
+	border-left: 1px solid var(--preto);
 }
 
-h1, .subtitulo{
-	margin: 10px;
-	color: #f2f3f8;
+.titulo{
+	margin: 5px;	
+	color: var(--branco1);
+}
+
+.subtitulo{	
+	color: var(--preto);
+	margin: 10px;	
 }
 
 .corpo{
@@ -49,10 +60,20 @@ h1, .subtitulo{
 	height: 75vh;
 }
 
-#codigo-fonte{
+#codigo-fonte{	
+	padding: 5px;
+	
 	resize: none;	
 }
 
-#previa{
-	background-color: white;
+#previa{	
+	padding-top: 10px;
+	padding-left: 35px;
+		
+	overflow: scroll;	
+}
+
+#codigo-fonte, #previa{		
+	border: 1px solid var(--preto);	
+	border-radius: 1%;
 }
